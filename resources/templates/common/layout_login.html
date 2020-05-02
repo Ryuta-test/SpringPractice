@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title layout:title-pattern="$CONTENT_TITLE | $LAYOUT_TITLE"></title>
+
+<!-- 文字エンコーディングを指定 -->
+<meta charset="UTF-8">
+
+<!-- IEの互換性表示対策 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- モバイルブラウザでの表示を制御 -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ajax Postリクエスト時に、403が返却されるのを防ぐ -->
+<meta th:name="_csrf" th:content="${_csrf.token}"/>
+<meta th:name="_csrf_header" th:content="${_csrf.headerName}"/>
+
+<!-- 外部ファイル読み込み -->
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<script type="text/javascript" th:src="@{/js/lib/jquery-3.4.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/lib/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/lib/jquery.validate.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/origin/common.js}"></script>
+<script type="text/javascript" th:src="@{/js/origin/location.js}"></script>
+<script type="text/javascript" th:src="@{/js/origin/memo.js}"></script>
+
+<!-- コンテキストパスを取得 -->
+<script th:inline="javascript">
+	/*<![CDATA[*/
+	const LOCATION_PATH = /*[[@{/}]]*/+'/';
+	/*]]>*/
+</script>
+
+</head>
+<body>
+	<!-- このコンテントを各htmlで読み込む -->
+	<div layout:fragment="content" th:remove="tag"></div>
+
+	<!-- header -->
+	<div class="row">
+		<div class="text-right col-sm-12 bg-info fixed-top">
+			<!-- ボタンは非活性かつ見えないように背景色と同化 -->
+			<a href="#" class="btn btn-info text-info disabled" tabindex="-1"
+				role="button" aria-disabled="true">ログアウト</a>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<!-- Copyright -->
+	<div class="row">
+		<div class="col-sm-12 bg-info fixed-bottom">
+			<div class="footer-copyright text-center font-weight-bold text-white">©
+				2020 Copyright: **サンプル**</div>
+		</div>
+	</div>
+	<!-- /Copyright -->
+</body>
+</html>

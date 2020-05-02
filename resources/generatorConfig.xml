@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<context id="PostgresTables" targetRuntime="MyBatis3">
+
+		<!-- スキーマ情報を取得する DB への接続設定 -->
+		<jdbcConnection driverClass="org.postgresql.Driver"
+			connectionURL="jdbc:postgresql://localhost:5432/＜DB名＞"
+			userId="＜ユーザー名＞" password="＜パスワード＞">
+		</jdbcConnection>
+
+		<!-- SELECT 結果等を格納するドメインモデルを生成する設定 -->
+		<javaModelGenerator
+			targetPackage="jp.practice.spring.mybatis.dto"
+			targetProject="practice_app/src/main/java">
+			<property name="enableSubPackages" value="false" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!-- SQL 設定が記述された XML を生成する設定 -->
+		<sqlMapGenerator
+			targetPackage="mybatis.mapper"
+			targetProject="practice_app/src/main/resources">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<!-- マッパークラスを生成する設定 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="jp.practice.spring.mybatis.mapper"
+			targetProject="practice_app/src/main/java">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+		<!-- コードを生成するテーブルを指定 -->
+		<table schema="develop" tableName="login" />
+		<table schema="develop" tableName="memo" />
+
+	</context>
+</generatorConfiguration>

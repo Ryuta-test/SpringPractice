@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{common/layout_login}">
+
+<head>
+
+<title>ログイン画面</title>
+</head>
+<body class="bg-light">
+	<!-- 共通レイアウト読み込み -->
+	<div layout:fragment="content">
+
+		<div class="row">
+			<div class="col-sm-12 mark">
+				<h2 class="ml-2 mt-5">ログインページ</h2>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+
+			<!-- Login form -->
+			<form th:action="@{/login_check}" method="post">
+
+				<!-- row -->
+				<div class="row mt-3 mb-2">
+					<div class="col-sm-6 mx-auto">
+						<label class="font-weight-bold">ログインID</label> <input type="text"
+							class="form-control" name="username" maxlength=20
+							placeholder="loginid" />
+					</div>
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div class="row mb-2">
+					<div class="col-sm-6 mx-auto">
+						<label class="font-weight-bold">パスワード</label> <input
+							type="password" class="form-control" name="password" maxlength=20
+							placeholder="password" />
+					</div>
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div class="row mb-2">
+					<div class="mx-auto">
+						<button type="submit" class="btn btn-success">ログイン</button>
+					</div>
+				</div>
+				<!-- /row -->
+
+			</form>
+			<!-- /Login form -->
+
+			<!-- row -->
+			<div class="row my-4">
+				<div class="mx-auto">
+					<label class="text-danger">このページからは新規のログインユーザーを発行できません。</label>
+				</div>
+			</div>
+			<!-- /row -->
+
+			<!-- row -->
+			<div class="row my-4">
+				<div class="mx-auto">
+					<label class="text-danger"
+						th:text="${param.error} !=  null ? 'ログインIDまたはパスワードが違います。' : ' '"></label>
+				</div>
+			</div>
+			<!-- /row -->
+
+		</div>
+		<!-- /container-fluid -->
+	</div>
+
+</body>
+</html>
