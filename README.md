@@ -1,16 +1,14 @@
 # CRUDサンプルアプリケーション
 
-***
-
 ### 概要
-Springを用いた、Webアプリケーション開発のサンプルを作成する。  
+[Spring](https://spring.io/)を用いた、Webアプリケーション開発のサンプルを作成する。  
 クライアントからのリクエストに対する処理はControllerが行い、必要に応じてServiceを呼び出す。  
 Serviceはビジネスロジックを担う。  
 ViewModelはクライアントで表示する情報を保持する。
 
 |画面名|機能|
 |:---|---|
-|ログイン画面  |Spring Securityによる認証、認可|
+|ログイン画面  |[Spring Security](https://spring.io/projects/spring-security)による認証、認可|
 |トップ画面  |ログイン成功時の遷移画面|
 |README画面  |備忘録を記載している画面|
 |Ajaxサンプル画面  |AjaxのGet、Postリクエストのサンプル画面|
@@ -104,10 +102,20 @@ main
 └─webapp
 ```
 
-![1_ログイン画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/1_%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3.PNG)
-![3_トップページ画面1](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/3_%E3%83%88%E3%83%83%E3%83%97%E3%83%9A%E3%83%BC%E3%82%B8.PNG)
-![4_README画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/4_README.PNG)
-![5_Ajaxサンプル画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/5_Ajax%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB.PNG)
-![10_Ajaxサンプル画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/10_%E3%83%A1%E3%83%A2%E3%82%92%E8%BF%BD%E5%8A%A0.PNG)
+### デモ画面
 
+![1_ログイン画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/1_%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3.PNG)  
+![3_トップページ画面1](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/3_%E3%83%88%E3%83%83%E3%83%97%E3%83%9A%E3%83%BC%E3%82%B8.PNG)  
+![4_README画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/4_README.PNG)  
+![5_Ajaxサンプル画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/5_Ajax%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB.PNG)  
+![10_Ajaxサンプル画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/10_%E3%83%A1%E3%83%A2%E3%82%92%E8%BF%BD%E5%8A%A0.PNG)  
+
+### ソフトウェア構成
+
+[openjdk-11](https://openjdk.java.net/projects/jdk/11/)  
+[postgreSQL-9.5.21](https://www.enterprisedb.com/ja/downloads/postgres-postgresql-downloads)  
+[jquery-3.4.1](https://jquery.com/)  
+[bootstrap-4.4.1](https://getbootstrap.com/)  
+[maven-3.6.3](https://maven.apache.org/install.html)  
+[tomcat-9.0.31](http://tomcat.apache.org/)  
 
