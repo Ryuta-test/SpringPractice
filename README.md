@@ -1,13 +1,105 @@
-# æœ¬ãƒªãƒã‚¸ãƒˆãƒªã¯ã€ç·´ç¿’ã®ãŸã‚ã«ä½œæˆ
+# CRUDƒTƒ“ƒvƒ‹ƒAƒvƒŠƒP[ƒVƒ‡ƒ“
 
-1. Keyword
-    1. Spring
-    1. Bootstrap4
-    1. jQuery
-    1. Java
-    1. HTML
-    1. CSS
-    1. javascript
-    1. shellscript
-    1. RHEL
+***
 
+### ŠT—v
+Spring‚ð—p‚¢‚½AWebƒAƒvƒŠƒP[ƒVƒ‡ƒ“ŠJ”­‚ÌƒTƒ“ƒvƒ‹‚ðì¬‚·‚éB  
+ƒNƒ‰ƒCƒAƒ“ƒg‚©‚ç‚ÌƒŠƒNƒGƒXƒg‚É‘Î‚·‚éˆ—‚ÍController‚ªs‚¢A•K—v‚É‰ž‚¶‚ÄService‚ðŒÄ‚Ño‚·B  
+Service‚ÍƒrƒWƒlƒXƒƒWƒbƒN‚ð’S‚¤B  
+ViewModel‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚Å•\Ž¦‚·‚éî•ñ‚ð•ÛŽ‚·‚éB
+
+|‰æ–Ê–¼|‹@”\|
+|:---|---|
+|ƒƒOƒCƒ“‰æ–Ê  |Spring Security‚É‚æ‚é”FØA”F‰Â|
+|ƒgƒbƒv‰æ–Ê  |ƒƒOƒCƒ“¬Œ÷Žž‚Ì‘JˆÚ‰æ–Ê|
+|README‰æ–Ê  |”õ–Y˜^‚ð‹LÚ‚µ‚Ä‚¢‚é‰æ–Ê|
+|AjaxƒTƒ“ƒvƒ‹‰æ–Ê  |Ajax‚ÌGetAPostƒŠƒNƒGƒXƒg‚ÌƒTƒ“ƒvƒ‹‰æ–Ê|
+|CRUDƒTƒ“ƒvƒ‹‰æ–Ê  |ƒƒ‚‚ð’Ç‰ÁAŽQÆAXVAíœ‚ª‚Å‚«‚é‰æ–Ê|
+
+
+### ƒvƒƒWƒFƒNƒg\¬
+```
+main
+„¥„Ÿjava
+„   „¤„Ÿjp
+„       „¤„Ÿpractice
+„           „¤„Ÿspring
+„               „   PracticeApplication.java
+„               „   ServletInitializer.java
+„               „ 
+„               „¥„Ÿconfig
+„               „       PrimaryConfig.java
+„               „       WebMvcConfig.java
+„               „       WebSecurityConfig.java
+„               „ 
+„               „¥„Ÿcontroller
+„               „       AjaxTemplateController.java
+„               „       IndexController.java
+„               „       LoginController.java
+„               „       MemoController.java
+„               „       ReadmeController.java
+„               „ 
+„               „¥„Ÿmybatis
+„               „   „¥„Ÿdto
+„               „   „       Login.java
+„               „   „       LoginExample.java
+„               „   „       Memo.java
+„               „   „       MemoExample.java
+„               „   „       MemoKey.java
+„               „   „ 
+„               „   „¤„Ÿmapper
+„               „           LoginMapper.java
+„               „           MemoMapper.java
+„               „ 
+„               „¥„Ÿservice
+„               „       MemoService.java
+„               „       UserDetailsServiceImpl.java
+„               „ 
+„               „¤„Ÿviewmodel
+„                       LoginViewModel.java
+„                       MemoViewModel.java
+„                       ReqAjaxViewModel.java
+„                       RetAjaxViewModel.java
+„ 
+„¥„Ÿresources
+„   „   application.properties
+„   „   generatorConfig.xml
+„   „   messages.properties
+„   „   messages_ja.properties
+„   „ 
+„   „¥„Ÿmybatis
+„   „   „¤„Ÿmapper
+„   „           LoginMapper.xml
+„   „           MemoMapper.xml
+„   „ 
+„   „¥„Ÿstatic
+„   „   „¥„Ÿcss
+„   „   „       bootstrap.min.css
+„   „   „ 
+„   „   „¥„Ÿimg
+„   „   „¤„Ÿjs
+„   „       „¥„Ÿlib
+„   „       „       bootstrap.min.js
+„   „       „       jquery-3.4.1.min.js
+„   „       „       jquery.validate.min.js
+„   „       „ 
+„   „       „¤„Ÿorigin
+„   „               common.js
+„   „               location.js
+„   „               memo.js
+„   „ 
+„   „¤„Ÿtemplates
+„       „   ajaxTemplate.html
+„       „   index.html
+„       „   login.html
+„       „   memo.html
+„       „   Readme.html
+„       „ 
+„       „¤„Ÿcommon
+„               footer.html
+„               header.html
+„               layout.html
+„               layout_login.html
+„ 
+„¤„Ÿwebapp
+```
