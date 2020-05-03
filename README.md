@@ -1,7 +1,8 @@
-# CRUDサンプルアプリケーション
+# Spring BootによるCRUDサンプルアプリケーション
 
 ### 概要
-[Spring](https://spring.io/)を用いた、Webアプリケーション開発のサンプルを作成する。  
+[Spring Boot](https://spring.io/)を用いた、Webアプリケーション開発のサンプルを作成する。  
+このサンプルでは、ログイン処理、ajaxによる非同期通信、DB処理を行う。  
 クライアントからのリクエストに対する処理はControllerが行い、必要に応じてServiceを呼び出す。  
 Serviceはビジネスロジックを担う。  
 Serviceでは、[MyBatis](https://mybatis.org/mybatis-3/)で自動生成したマッパーを用いてDB処理を行う。  
