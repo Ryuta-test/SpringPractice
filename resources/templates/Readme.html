@@ -35,7 +35,8 @@
 						</h5>
 					</div>
 					<div id="app_construction_content" class="collapse show"
-						role="tabpanel" aria-labelledby="app_construction">
+						role="tabpanel" aria-labelledby="app_construction"
+						data-parent="#accordion">
 						<div class="card-body">
 							<!-- message_ja.propertiesから直接取得 -->
 							<p th:text="#{msg.openjdk.ver}"></p>
@@ -48,19 +49,21 @@
 					</div>
 					<!-- /app construction -->
 
-					<!-- DB config -->
-					<div class="card-header" role="tab" id="db_config">
+					<!-- app flow -->
+					<div class="card-header" role="tab" id="app_flow">
 						<h5 class="mb-0">
 							<a class="text-body d-block p-3 m-n3" data-toggle="collapse"
-								href="#db_config_content" role="button" aria-expanded="true"
-								aria-controls="db_config_content"> DB設定 </a>
+								href="#app_flow_content" role="button" aria-expanded="true"
+								aria-controls="app_flow_content"> 処理フロー </a>
 						</h5>
 					</div>
-					<div id="db_config_content" class="collapse" role="tabpanel"
-						aria-labelledby="db_config">
-						<div class="card-body">DBの説明</div>
+					<div id="app_flow_content" class="collapse" role="tabpanel"
+						aria-labelledby="app_flow" data-parent="#accordion">
+						<div class="card-body">
+							<img th:src="@{/img/app_flow.PNG}">
+						</div>
 					</div>
-					<!-- /DB config -->
+					<!-- /app flog -->
 
 
 				</div>
