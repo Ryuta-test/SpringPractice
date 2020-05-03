@@ -4,7 +4,8 @@
 [Spring](https://spring.io/)を用いた、Webアプリケーション開発のサンプルを作成する。  
 クライアントからのリクエストに対する処理はControllerが行い、必要に応じてServiceを呼び出す。  
 Serviceはビジネスロジックを担う。  
-ViewModelはクライアントで表示する情報を保持する。
+Serviceでは、[MyBatis](https://mybatis.org/mybatis-3/)で自動生成したマッパーを用いてDB処理を行う。  
+ViewModelはクライアントで表示する情報を保持する。  
 
 ### 処理フロー
 ```
@@ -21,6 +22,8 @@ ViewModelはクライアントで表示する情報を保持する。
 +----------------+                  +----------------+       +----------------+
 ```
 
+
+### 画面一覧
 |画面名|機能|
 |:---|---|
 |ログイン画面  |[Spring Security](https://spring.io/projects/spring-security)による認証、認可|
@@ -28,6 +31,16 @@ ViewModelはクライアントで表示する情報を保持する。
 |README画面  |備忘録を記載している画面|
 |Ajaxサンプル画面  |AjaxのGet、Postリクエストのサンプル画面|
 |CRUDサンプル画面  |メモを追加、参照、更新、削除ができる画面|
+
+### ソフトウェア構成
+
+[openjdk-11](https://openjdk.java.net/projects/jdk/11/)  
+[postgreSQL-9.5.21](https://www.enterprisedb.com/ja/downloads/postgres-postgresql-downloads)  
+[jquery-3.4.1](https://jquery.com/)  
+[bootstrap-4.4.1](https://getbootstrap.com/)  
+[maven-3.6.3](https://maven.apache.org/install.html)  
+[tomcat-9.0.31](http://tomcat.apache.org/)  
+
 
 
 ### プロジェクト構成
@@ -90,6 +103,8 @@ main
 │  │  │      bootstrap.min.css
 │  │  │
 │  │  ├─img
+│  │  │      app_flow.PNG
+│  │  │
 │  │  └─js
 │  │      ├─lib
 │  │      │      bootstrap.min.js
@@ -124,13 +139,3 @@ main
 ![4_README画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/4_README.PNG)  
 ![5_Ajaxサンプル画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/5_Ajax%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB.PNG)  
 ![10_Ajaxサンプル画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/10_%E3%83%A1%E3%83%A2%E3%82%92%E8%BF%BD%E5%8A%A0.PNG)  
-
-### ソフトウェア構成
-
-[openjdk-11](https://openjdk.java.net/projects/jdk/11/)  
-[postgreSQL-9.5.21](https://www.enterprisedb.com/ja/downloads/postgres-postgresql-downloads)  
-[jquery-3.4.1](https://jquery.com/)  
-[bootstrap-4.4.1](https://getbootstrap.com/)  
-[maven-3.6.3](https://maven.apache.org/install.html)  
-[tomcat-9.0.31](http://tomcat.apache.org/)  
-
