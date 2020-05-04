@@ -168,3 +168,7 @@ main
 ![5_Ajaxサンプル画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/5_Ajax%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB.PNG)  
 ![10_Ajaxサンプル画面](https://github.com/Ryuta-test/SpringPractice/blob/images/capture/10_%E3%83%A1%E3%83%A2%E3%82%92%E8%BF%BD%E5%8A%A0.PNG)  
 
+### 参考
+
+[MyBatisによるMapperの自動生成](https://qiita.com/ketman55/items/abcc1e23dcac0cc268b5)  
+[Spring Securityによる認証・認可](https://qiita.com/opengl-8080/items/032ed0fa27a239bdc1cc)  

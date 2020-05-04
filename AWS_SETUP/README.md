@@ -508,3 +508,10 @@
 [tomcat-9.0.31](http://tomcat.apache.org/)  
 [apache-2.4](https://httpd.apache.org/)
 
+### 参考
+
+[ApacheとTomcatの連携](https://qiita.com/Dace_K/items/9d0419aefcb969335ca5)  
+[Tomcatインストール](https://qiita.com/hiren/items/2a4f1b55c99ebfb3fd08)  
+[PostgreSQLインストール](https://www.setouchino.cloud/blogs/95#postgresql-yum)  
+[CentOS7にPostgreSQLインストール](https://qiita.com/jinnai73/items/af58bdac6fca869933c7)  
+[Peer認証無効化](https://command-f.tech/postgresql/1)  
