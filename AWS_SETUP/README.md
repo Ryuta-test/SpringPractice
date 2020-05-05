@@ -508,6 +508,15 @@
 [tomcat-9.0.31](http://tomcat.apache.org/)  
 [apache-2.4](https://httpd.apache.org/)
 
+### 備考
+
+上記の設定で、インターネットからアクセスが可能になりますが、セキュリティ面では考慮していないので、  
+AWSのマネジメントコンソールから、セキュリティグループの設定をしてください。  
+なお、セキュリティグループで80ポート(http)を開ける必要があります。  
+ちなみに、firewalldはAmazon Linux2にはインストールされていませんが、代わりにセキュリティグループを設定します。  
+[AWSのセキュリティグループ](https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
+
+
 ### 参考
 
 [ApacheとTomcatの連携](https://qiita.com/Dace_K/items/9d0419aefcb969335ca5)  
