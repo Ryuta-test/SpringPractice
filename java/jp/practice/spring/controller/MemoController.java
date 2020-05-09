@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -62,6 +63,12 @@ public class MemoController {
 
 		try {
 			memoService.insertMemo(id, title, input);
+		} catch (DuplicateKeyException e) {
+			e.printStackTrace();
+			response.setCode(-1);
+			response.setMessage("タイトルが重複しています。");
+			return response;
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			response.setCode(-1);
