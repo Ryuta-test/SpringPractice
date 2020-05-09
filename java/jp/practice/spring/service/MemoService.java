@@ -14,7 +14,7 @@ import jp.practice.spring.mybatis.mapper.MemoMapper;
 import jp.practice.spring.viewmodel.MemoViewModel;
 
 @Service
-@Transactional
+@Transactional(rollbackFor = Exception.class)
 public class MemoService {
 
 	@Autowired
